@@ -1,4 +1,284 @@
-<html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Budapest Autószalon Opel, Mitsubishi, SsangoYong, Subaru és Használtautó márkakereskedés és szerviz</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <!---#######   Style Sheets    ##########-->
+
+  <link rel="stylesheet" href="{% static 'css/core.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/carussel.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!---#######   Script tags    ##########-->
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"  type="text/javascript" defer></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"  type="text/javascript"defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
+  <script src="piv.js" defer></script>
+
+  <!---#######  Meta tags    ##########-->
+
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="description" content="Új és használt autók, Opel, Subaru, Mitsubishi és SsangYong személy- és haszonjárművek,
+                                    szerviz, autó szerviz, márkaszerviz, márkafüggetlen szerviz.
+                                    Flottakezelés, business szolgáltatások és autóbérlés cégeknek és
+                                    magányszermélyeknek, használt autók garanciával">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body class="noselect">
+  <div class="container">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!--###Modal content###-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Szerviz bejelentkezés</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email cím</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="név@példa.hu">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1"> Válasszon telephelyet</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1044 Budapet Külső Váci út 57.</option>
+                  <option>2310 Szigetszentmiklós II. Rákóczi Ferenc utca 57.</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect2"> </label>
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"> Üzenet</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Küldés</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Top nav-->
+<nav>
+  <div id="top-nav" >
+    <ul>
+      <li><a data-toggle="modal" data-target="#myModal">Szerviz bejelentkezés</a></li>
+      <li><a data-toggle="modal" data-target="#myModal">Ajánlatkérés</a></li>
+      <li><a data-toggle="modal" data-target="#myModal">Tesztvezetés</a></li>
+      <li><a href="./kapcsolat/kapcsolat.html">Kapcsolat</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Header Showcase -->
+<header>
+  <nav>
+    <div id="main-nav">
+        <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+        <a href="#home">Budapest Autószalon</a>
+      </div>
+      <ul>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">Új autó vásárlás</button>
+            <div class="dropdown-content">
+               <a href="#"><img src="pics/opel-logo.png" class="zoom"></a>
+               <a href="#"><img src="pics/mitsubishi-logo.png" class="zoom"></a>
+               <a href="#"><img src="pics/subaru_logo.png" class="zoom"></a>
+               <a href="#"><img src="pics/ssangyong-logo.png"  class="zoom"></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="./szerviz/szerviz.html">Szerviz</a></li>
+        <li><a href="#">Használt autó</a></li>
+        <li><a href="#">Autóbérlés</a></li>
+        <li><a href="#">Ajánlataink</a></li>
+        <li><a href="./kapcsolat/kapcsolat.html">Kapcsolat</a></li>
+        <li><a href="./rólunk/rolunk.html">Rólunk</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<header id="showcase" >
+  <div class="simple-ss" id="simple-ss"></div>
+</header>
+
+
+<!--
+<grid-container>
+  <grid-item><img src="opel-logo.png" width="80" height="70" alt=""></grid-item>
+  <grid-item><img src="mitsubishi-logo.png" width="80" height="70" alt=""></grid-item>
+  <grid-item><img src="subaru.png" width="90" height="100" alt=""></grid-item>
+  <grid-item><img src="ssangyong-logo.png" width="150" height="100" alt=""></grid-item>
+</grid-container>
+-->
+<!--
+<div class="item">
+    <a class="overlay" href="#">
+      <h3 class="title">Some title</h3>
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet, <br>
+          consectetur adipisicing elit.
+        </p>
+      </div>
+    </a>
+  </div>
+-->
+<!-- Main Area -->
+<main id="main">
+
+  <!-- Section A -->
+  <!--
+  <section id="section-a" class="grid">
+    <div class="content-wrap">
+      <h2 class="content-title">Szolgáltatásaink</h2>
+      <div class="content-text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolores dicta aliquam aperiam repellendus. Perferendis officiis deserunt velit voluptas nobis sequi
+          animi totam, accusantium, ex eius quia, natus quo?</p>
+      </div>
+    </div>
+  </section>
+  -->
+  <!-- Section B -->
+  <section id="section-b">
+    <br/ >
+    <h1><a href="/">Aktuális kedvezményes ajánlataink </a></h1>
+
+    <div class="boxesContainer">
+
+      <div class="cardBox">
+
+        <div class="card">
+
+          <div class="front">
+            <img src="http://placekitten.com/250/250"" alt="Denim Jeans" style="width:100%">
+
+          </div>
+          <div class="back">
+            <h3>Opel Milliós napok </h3>
+            <!--<p>Content in card one</p>-->
+            <a href="#">Érdekel</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <img src="http://placekitten.com/250/250" alt="Denim Jeans" style="width:100%">
+            <!--
+            <h3>Card Two</h3>
+            <p>Hover to flip</p>
+            <strong>&#x21bb;</strong>
+          -->
+          </div>
+          <div class="back">
+            <h3>Back Side Two</h3>
+            <p>Content in card two</p>
+            <a href="#">Érdekel</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <img src="http://placekitten.com/250/250" alt="Denim Jeans" style="width:100%">
+            <!--
+            <h3>Card Three</h3>
+            <p>Hover to flip</p>
+            <strong>&#x21bb;</strong>
+          -->
+          </div>
+          <div class="back">
+            <h3>Back Side Three</h3>
+            <p>Content in card three</p>
+            <a href="#">Érdekel</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <img src="http://placekitten.com/250/250" alt="Denim Jeans" style="width:100%">
+            <!--<a href="#">Érdekel</a>-->
+
+            <!--
+            <h3>Card Four</h3>
+            <p>Hover to flip</p>
+            <strong>&#x21bb;</strong>
+          -->
+          </div>
+          <div class="back">
+            <h3>Back Side Four</h3>
+            <p>Content in card four</p>
+            <a href="./szerviz/szerviz.html">Érdekel</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<!--.boxesContainer-->
+  </section>
+
+  <!--End of the Section B -->
+  <!-- THIS WAS THE CARD SECTION :))  -->
+
+  <!-- Section C -->
+
+  <section id="section-c" class="grid">
+    <div class="content-wrap">
+      <h2 class="content-title">Budapest Autószalon</h2>
+      <p>Új és használt autók garanciával, forglamazott márkáink Opel, Mitsubishi,
+         SsangYong, Subaru. Kéttő telephelyünkön közel 500 autót tartunk így Önnek nem kell várnia új autójára.
+         Szervizeinkben a legkorszerűbb technológiákat állítjuk szolgálatban.
+      </p>
+    </div>
+
+
+
+</main>
+<!-- Footer ezen a részen kell a kettő szalon címét két olszlopban prezentálni és jelenzni hogy melyik értékesítés hol van
+ezzel együtt aszerviz is szét szedni.
+továbbá linkeket elhelyezni ... oldaltérkép -->
+<div id="site-footer">
+  <div class="container">
+    <p> Címünk:<br /> 1044 Budapest (Külső) Vácu út 76-80.  </p>
+    <p> Új és használt értékesítés<br />
+    H-P: 8.00 - 18.00 <br />
+    Szombat: 9.00 - 13.00
+    </p>
+    <p> Szerviz<br />
+      H-P: 8.00 - 17.00 <br />
+      Szombat: Zárva
+    </p>
+    <p>Copyright © 2019 Sziget Autóház Kft. All rights reserved. Az árváltoztatás jogát fenntartjuk. Az esetleges hibákért felelősséget nem vállalunk. </p>
+
+  </div>
+</div>
+</body>
 </html>
