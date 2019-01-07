@@ -5,4 +5,6 @@ from . import views
 
 urlpatterns = [
         url(r'^$', views.homepage),
+        url(r'^szerviz/', views.szerviz),
+
 ]
