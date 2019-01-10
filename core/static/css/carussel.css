@@ -151,6 +151,9 @@ Start line
 <------------------------------------------------------>
 */
 
+
+
+
 #cardboxtxt{
   margin-bottom: 1px !importantmedia
 }
@@ -288,17 +291,25 @@ Start line
   }
 }
 
+
+
+
 @media screen and (max-width: 767px) {
   .cardBox {
+    display: none;
     margin-left: 8.8%;
     margin-top: -2%;
     width: 36%;
   }
   .card {
+    display: none;
+
     height: 285px;
   }
   .cardBox:last-child {
     margin-bottom: 40%;
+    display: none;
+
   }
 }
 
