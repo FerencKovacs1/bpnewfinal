@@ -355,14 +355,15 @@ nav ul li a:hover:before{
   	nav ul ul a,
     nav ul ul ul a{
   		padding:14px 20px;
-  		color:#FFF;
+  		color:yellow;
   		font-size:17px;
+      background-color: khaki;
   	}
 
 
   	nav ul li ul li .toggle,
   	nav ul ul a {
-  		background-color: #212121;
+  		display: grid;
   	}
 
   	/* Hide Dropdowns by Default */
