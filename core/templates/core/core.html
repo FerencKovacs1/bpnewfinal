@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!---#######   Script tags    ##########-->
-
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"  type="text/javascript" defer></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
   <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js" />
@@ -89,17 +88,60 @@
     </ul>
   </div>
 </nav>
-<header class="header">
-  <h1 class="logo"><a href="#">Budapest Autószalon</a></h1>
-  <ul class="main-nav">
-    <li><a href="#">Új autók</a></li>
-    <li><a href="#">Szerviz</a></li>
-    <li><a href="#">Használt autók</a></li>
-    <li><a href="#">Kapcsolat</a></li>
-  </ul>
-</header>
-<!-- Header Showcase -->
+<nav>
+<div id="logo">Budapest Autószalon Logo</div>
 
+<label for="drop" class="toggle">Menu</label>
+<input type="checkbox" id="drop" />
+  <ul class="menu">
+      <li><a href="#">Új autók</a></li>
+      <li>
+          <!-- First Tier Drop Down -->
+          <label for="drop-1" class="toggle"> +</label>
+          <a href="#">Szerviz</a>
+          <input type="checkbox" id="drop-1"/>
+          <ul>
+              <li><a href="#">Online bejelentkezés</a></li>
+              <li><a href="#">Olajcsere</a></li>
+              <li><a href="#">Karosszéria javítás</a></li>
+          </ul>
+
+      </li>
+      <li>
+
+      <!-- First Tier Drop Down -->
+      <label for="drop-2" class="toggle">Használt autók</label>
+      <a href="#">Autó</a>
+      <input type="checkbox" id="drop-2"/>
+      <ul>
+          <li><a href="#">res</a></li>
+          <li><a href="#">Links</a></li>
+          <li>
+
+          <!-- Second Tier Drop Down -->
+          <label for="drop-3" class="toggle">Tutorials +</label>
+          <a href="#">Többi</a>
+          <input type="checkbox" id="drop-3"/>
+
+          <ul>
+              <li><a href="#">HTML/CSS</a></li>
+              <li><a href="#">jQuery</a></li>
+              <li><a href="#">Other</a></li>
+          </ul>
+          </li>
+      </ul>
+      </li>
+      <li><a href="#">Kapcsolat</a></li>
+      <li><a href="#">Autóbérlés</a></li>
+  </ul>
+</nav>
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's s
+  tandard dummy text ever since the 1500s, whe
+  n an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It   </p>
+<!-- Header Showcase -->
 
 <!--
 <grid-container>
@@ -129,7 +171,7 @@
 <input type="radio" name="slider" title="slide3" class="slider__nav"/>
 <input type="radio" name="slider" title="slide4" class="slider__nav"/>
 <div class="slider__inner">
-  <div class="slider__contents"><a href="#"><img src="{% static "januarbanner2.png" %}"></a></i>
+  <div class="slider__contents"><a href="#"><img  class="img-responsive" src="{% static ".png" %}"></a></i>
     <h2 class="slider__caption"></h2>
     <p class="slider__txt"></p>
   </div>
@@ -166,7 +208,7 @@
   <!-- Section B -->
   <section id="section-b">
     <br/ >
-    <h1>Aktuális kedvezményes ajánlataink</h1>
+    <h1 id="cardboxtxt">Aktuális kedvezményes ajánlataink</h1>
 
     <div class="boxesContainer">
 
@@ -249,7 +291,7 @@
   <!--End of the Section B -->
   <!-- THIS WAS THE CARD SECTION :))  -->
 
-  <!-- Section C -->
+  <!-- Section C
 
   <section id="section-c" class="grid">
     <div class="content-wrap">
@@ -259,7 +301,7 @@
          Szervizeinkben a legkorszerűbb technológiákat állítjuk szolgálatban.
       </p>
     </div>
-
+-->
 
 
 </main>
