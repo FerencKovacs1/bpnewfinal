@@ -1,10 +1,4 @@
-nav{
-  width: 100%;
-  /*display: flex;*/
-  background: #FFAAAA;
-  text-align: center;
-  padding: 0.1em;
-}
+
 nav ul{
    display: inline-flex;
    list-style:none;
@@ -12,9 +6,7 @@ nav ul{
    padding: 0;
 }
 
-#main-nav{
-  font-size: 1em;
-}
+
 
 .zoom:hover{
   -ms-transform: scale(1.2); /* IE 9 */
@@ -22,31 +14,23 @@ nav ul{
   transform: scale(1.2);
 }
 
-nav li{
-  text-transform: ;
 
-}
 
-nav a{
-  text-decoration: none;
-  color: #000;
-}
 
 nav ul li a{
   display: inline-block;
   padding: 30px 30px 20px;
   position: relative;
-  transition: color .40s;
+  transition: color .60s;
 }
 
 nav ul li a:hover{
-   color: blue;
+   color: black;
    text-decoration: none;
 
 }
 
 nav ul li a:hover:before{
-  content: '';
   width: 100%;
 }
 
@@ -76,7 +60,7 @@ nav ul li a:hover:before{
 }
 
 
-
+/*
 
 #top-nav{
   background-color: #d5f8e8;
@@ -91,98 +75,25 @@ nav ul li a:hover:before{
   padding: 1.2em;
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("pics/kia.jpg");
-
-    /* Set a specific height */
-    min-height: 250px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+*/
 
 
 
 
 
-
-/*======================================================
-                          lOGO
-
-
-
-.logo {
-  float: left;
-  margin-left: 28px;
-  font-size: 1.5em;
-  padding-top: 20px;
-  height: 60px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-} @media(max-width: 768px) {
-    .logo {
-/*       margin-left: 5px;
-    }
-  }ssss
-
-  ======================================================*/
-  /* CSS Document */
 
   @import url(https://fonts.googleapis.com/css?family=Open+Sans);
   @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
-  body {
-  	background: #212121;
-  	font-size:22px;
-  	line-height: 32px;
-  	color: #ffffff;
-  	margin: 0;
-  	padding: 0;
-  	word-wrap:break-word !important;
-  	font-family: 'Open Sans', sans-serif;
-  	}
 
-  h1 {
-  	font-size: 60px;
-  	text-align: center;
-  	color: #FFF;
-  }
 
-  h3 {
-  	font-size: 30px;
-  	line-height: 34px;
-  	text-align: center;
-  	color: #FFF;
-  }
 
-  h3 a {
-  	color: #FFF;
-  }
-
-  a {
-  	color: #FFF;
-  }
-
-  h1 {
-  	margin-top: 100px;
-  	text-align:center;
-  	font-size:60px;
-  	line-height: 70px;
-  	font-family: 'Bree Serif', 'serif';
-  	}
 
   #container {
   	margin: 0 auto;
   	max-width: 890px;
   }
 
-  p {
-  	text-align: center;
-  }
 
   .toggle,
   [id^=drop] {
@@ -193,7 +104,7 @@ nav ul li a:hover:before{
   nav {
   	margin:0;
   	padding: 0;
-  	background-color: #254441;
+  	background-color: black;
   }
 
   #logo {
@@ -208,7 +119,6 @@ nav ul li a:hover:before{
    * we need to add a clear after the container. */
 
   nav:after {
-  	content:"";
   	display:table;
   	clear:both;
   }
@@ -216,7 +126,7 @@ nav ul li a:hover:before{
   /* Removing padding, margin and "list-style" from the "ul",
    * and adding "position:reltive" */
   nav ul {
-  	float: right;
+  	float: center;
   	padding:0;
   	margin:0;
   	list-style: none;
@@ -227,15 +137,14 @@ nav ul li a:hover:before{
   nav ul li {
   	margin: 0px;
   	display:inline-block;
-  	float: left;
-  	background-color: #254441;
+  	background-color: black;
   	}
 
   /* Styling the links */
   nav a {
   	display:block;
-  	padding:14px 20px;
-  	color:#FFF;
+  	padding:2px 20px;
+  	color:white;
   	font-size:17px;
   	text-decoration:none;
   }
@@ -245,16 +154,16 @@ nav ul li a:hover:before{
 
   /* Background color change on Hover */
   nav a:hover {
-  	background-color: #000000;
+  	background-color: white;
   }
 
   /* Hide Dropdowns by Default
    * and giving it a position of absolute */
   nav ul ul {
   	display: none;
-  	position: absolute;
+    	position: absolute;
   	/* has to be the same number as the "line-height" of "nav a" */
-  	top: 60px;
+  	top: 73px;
   }
 
   /* Display Dropdowns on Hover */
@@ -264,7 +173,7 @@ nav ul li a:hover:before{
 
   /* Fisrt Tier Dropdown */
   nav ul ul li {
-  	width:170px;
+  	width:150px;
   	float:none;
   	display:list-item;
   	position: relative;
@@ -314,10 +223,10 @@ nav ul li a:hover:before{
   	/* Stylinf the toggle lable */
   	.toggle {
   		display: block;
-  		background-color: #254441;
-  		padding:14px 20px;
+  		background-color: black;
+  		padding:20px 20px;
   		color:#FFF;
-  		font-size:17px;
+  		font-size:20px;
   		text-decoration:none;
   		border:none;
   	}
@@ -339,7 +248,7 @@ nav ul li a:hover:before{
 
   	nav ul ul .toggle,
   	nav ul ul a {
-  		padding: 0 40px;
+  		padding: 0 500px;
   	}
 
   	nav ul ul ul a {
@@ -354,10 +263,10 @@ nav ul li a:hover:before{
   	nav ul li ul li .toggle,
   	nav ul ul a,
     nav ul ul ul a{
-  		padding:14px 20px;
-  		color:yellow;
-  		font-size:17px;
-      background-color: khaki;
+  		padding:8px 2px;
+  		color:white;
+  		font-size:12px;
+      background-color: black;
   	}
 
 
