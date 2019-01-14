@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/brands.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core.css' %}">
+
+  </head>
+  <body>
+    <h1> Válasszon forgalmazott márkáink közül </h1>
+    <div class="wrapper">
+      <div class="item1"><a href="{% url 'core:szerviz' %}"><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a>
+      <div class="item2"><a href=""><img src="{% static "subaru-logo-subarubudapest-subaru-markakereskedes.png" %}" alt="My image"  class="zoom"></div></a>
+      <div class="item3"><a href=""><img src="{% static "ssangyong-logo-ssangyongbudapest.png" %}" alt="My image"  class="zoom"></div></a>
+      <div class="item4"><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a>
+  </body>
+</html>

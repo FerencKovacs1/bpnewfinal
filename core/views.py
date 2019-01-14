@@ -6,3 +6,6 @@ def homepage(request):
 
 def szerviz(request):
     return render(request,'core/szerviz.html')
+
+def brands(request):
+    return render(request,'core/markak.html')
