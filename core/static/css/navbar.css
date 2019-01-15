@@ -34,24 +34,14 @@ nav ul li a:hover:before{
   width: 100%;
 }
 
-@media (max-width: 768px){
-  nav ul{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-  }
-  #top-nav{
-    display: none;
-  }
-}
+
 
 
 
   nav ul li a{
-    display: flex;
+    display: inline-block;
     justify-content: center;
   }
-
   nav ul li a:before{
     right: 0;
     left: 0;
@@ -136,8 +126,7 @@ nav ul li a:hover:before{
   /* Positioning the navigation items inline */
   nav ul li {
   	margin: 0px;
-  	display:inline-block;
-  	background-color: black;
+  	background-color: #000000;
   	}
 
   /* Styling the links */
@@ -148,7 +137,6 @@ nav ul li a:hover:before{
   	font-size:17px;
   	text-decoration:none;
   }
-
 
   nav ul li ul li:hover { background: #000000; }
 
@@ -168,15 +156,18 @@ nav ul li a:hover:before{
 
   /* Display Dropdowns on Hover */
   nav ul li:hover > ul {
-  	display:inherit;
+  	display:inline-flex;
   }
+
+
+
 
   /* Fisrt Tier Dropdown */
   nav ul ul li {
   	width:150px;
   	float:none;
-  	display:list-item;
   	position: relative;
+    display: inline-block;
   }
 
   /* Second, Third and more Tiers
@@ -310,4 +301,17 @@ nav ul li a:hover:before{
   		width: 94%;
   	}
 
+  }
+
+
+
+  @media (max-width: 768px){
+    nav ul{
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+    }
+    #top-nav{
+      display: none;
+    }
   }

@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!---#######   Script tags    ##########-->
-  <script src="https://code.jquery.com/jquery-1.11.0.min.js"  type="text/javascript" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
-  <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js" />
   <script src="{% static 'piv.js' %}"></script>
 
 
@@ -93,20 +92,20 @@
 
 <label for="drop" class="toggle">Menu</label>
 <input type="checkbox" id="drop" />
-  <ul class="menu">
-      <li><a href="{% url 'core:markak' %}">Új autók</a></li>
-      <li>
-          <!-- First Tier Drop Down -->
-          <label for="drop-1" class="toggle">Szerviz+</label>
-          <a href="#">Szerviz</a>
-          <input type="checkbox" id="drop-1"/>
-          <ul>
-              <li><a href="#">Online bejelentkezés</a></li>
-              <li><a href="#">Olajcsere</a></li>
-              <li><a href="#">Karosszéria javítás</a></li>
-          </ul>
+  <ul class="menu">  <li>
 
-      </li>
+        <!-- First Tier Drop Down -->
+        <label for="drop-1" class="toggle">Személyautók+</label>
+        <a>Személyautók</a>
+        <input type="checkbox" id="drop-1"/>
+        <ul>
+            <li><a href="{% url 'core:szerviz' %}"><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
+            <li><a href=""><img src="{% static "subaru-logo-subarubudapest-subaru-markakereskedes.png" %}" alt="My image"  class="zoom"></div></a></li>
+            <li><a href=""><img src="{% static "ssangyong-logo-ssangyongbudapest.png" %}" alt="My image"  class="zoom"></div></a></li>
+            <li><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
+        </ul>
+    </li>
+      <li><a href="{% url 'core:markak' %}">Szerviz  </a></li>
       <li>
 
       <!-- First Tier Drop Down -->
