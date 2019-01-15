@@ -8,5 +8,7 @@ urlpatterns = [
     url(r'', include('core.urls')),
     url(r'^szerviz/',include('core.urls')),
     url(r'^markak/',include('core.urls')),
+    url(r'^kapcsolat/',include('core.urls')),
+
 
 ]

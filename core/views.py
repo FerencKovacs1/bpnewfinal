@@ -9,3 +9,6 @@ def szerviz(request):
 
 def brands(request):
     return render(request,'core/markak.html')
+
+def kapcsolat(request):
+    return render(request,'core/kapcsolat.html')

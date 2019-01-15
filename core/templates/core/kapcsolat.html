@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Budapest Autószalon Opel, Mitsubishi, SsangoYong, Subaru és Használtautó márkakereskedés és szerviz</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <!---#######   Style Sheets    ##########-->
+
+  <link rel="stylesheet" href="{% static 'css/core.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/carussel.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!---#######   Script tags    ##########-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+  <!---#######  Meta tags    ##########-->
+
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="description" content="Új és használt autók, Opel, Subaru, Mitsubishi és SsangYong személy- és haszonjárművek,
+                                    szerviz, autó szerviz, márkaszerviz, márkafüggetlen szerviz.
+                                    Flottakezelés, business szolgáltatások és autóbérlés cégeknek és
+                                    magányszermélyeknek, használt autók garanciával">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+  <body>
+    <nav>
+    <div id="logo">Budapest Autószalon Logo</div>
+
+    <label for="drop" class="toggle">Menu</label>
+    <input type="checkbox" id="drop" />
+      <ul class="menu">  <li>
+
+            <!-- First Tier Drop Down -->
+            <label for="drop-1" class="toggle">Személyautók+</label>
+            <a>Személyautók</a>
+            <input type="checkbox" id="drop-1"/>
+            <ul>
+                <li><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
+                <li><a href=""><img src="{% static "subaru-logo-subarubudapest-subaru-markakereskedes.png" %}" alt="My image"  class="zoom"></div></a></li>
+                <li><a href=""><img src="{% static "ssangyong-logo-ssangyongbudapest.png" %}" alt="My image"  class="zoom"></div></a></li>
+                <li><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
+            </ul>
+        </li>
+          <li><a href="{% url 'core:szerviz' %}">Szerviz  </a></li>
+          <li>
+
+          <!-- First Tier Drop Down -->
+          <label for="drop-2" class="toggle">Használt autók</label>
+          <a href="#">Autó</a>
+          <input type="checkbox" id="drop-2"/>
+          <ul>
+              <li><a href="#">res</a></li>
+              <li><a href="#">Links</a></li>
+              <li>
+
+              <!-- Second Tier Drop Down -->
+              <label for="drop-3" class="toggle">csimpao +</label>
+              <a href="#">Többi</a>
+              <input type="checkbox" id="drop-3"/>
+
+              <ul>
+                  <li><a href="#">zsák</a></li>
+                  <li><a href="#">field</a></li>
+                  <li><a href="#">Other</a></li>
+              </ul>
+              </li>
+          </ul>
+          </li>
+          <li><a href="#">Kapcsolat</a></li>
+          <li><a href="#">Autóbérlés</a></li>
+      </ul>
+    </nav>
+    <div class="map-popup">
+     <img alt="HO-SP Hungary Kft." src="" />
+     <p class="address">
+       <span class="name">HO-SP Hungary Kft.</span>
+       <br /> 9400 Budapest
+       <br /> Külső váci út 76-80
+       <br />
+       <span>Telefonszám</span> <a class="track-click" data-event-category="contact" data-event-detail="phone" href="tel:+3699512470">+36 1 803 60 50</a>
+       <br /> <a href="//www.budapestautoszalon.hu">www.budapestautoszalon.hu</a>
+     </p>
+     <a class="secondary-btn track-click" target="_blank" data-event-category="Route planen" href="https://maps.google.at/maps/dir//Pozsonyi+%C3%BAt+57-63.%2C+9400+Budapest">Útvonaltervezés</a>
+   </div>
+   <input type="hidden" class="map-longitude" value="16.603" />
+   <input type="hidden" class="map-latitude" value="47.695" />
+
+
+   <!-- link to opening-times -->
+   <a class="contact-opening-btn" href="#"><span class="icon-opening"></span><span class="lbl">Nyitvatartási idő</span></a>
+   <!-- opening-times -->
+   <div class="opening-content mobile-overlay">
+     <a href="#" class="closebtn contact-opening-close" title="bezárás"></a>
+     <div class="mobile-wrapper">
+      <a class="hidden-anchor" id="nyitvatartas"></a>
+       <h2 class="layout2">Nyitvatartási idő <span class="location"><br />Budapest</span></h2>
+       <table class="openinghours-table">
+         <thead>
+           <tr>
+             <th scope="col"></th>
+             <th scope="col">Hé</th>
+             <th scope="col">Ke</th>
+             <th scope="col">Sze</th>
+             <th scope="col">Csü</th>
+             <th scope="col">Pé</th>
+             <th scope="col">Szo</th>
+
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th scope="row">Értékesítés</th>
+             <td data-title="Hé"><span>09:00-18:00</span></td>
+             <td data-title="Ke"><span>09:00-18:00</span></td>
+             <td data-title="Sze"><span>09:00-18:00</span></td>
+             <td data-title="Csü"><span>09:00-18:00</span></td>
+             <td data-title="Pé"><span>09:00-18:00</span></td>
+             <td data-title="Szo"><span>09:00-13:00</span></td>
+
+           </tr>
+           <tr>
+             <th scope="row">Szerviz</th>
+             <td data-title="Hé"><span>08:00-18:00</span></td>
+             <td data-title="Ke"><span>08:00-18:00</span></td>
+             <td data-title="Sze"><span>08:00-18:00</span></td>
+             <td data-title="Csü"><span>08:00-18:00</span></td>
+             <td data-title="Pé"><span>08:00-18:00</span></td>
+             <td data-title="Szo"><span>-</span></td>
+
+           </tr>
+         </tbody>
+       </table>
+       <table class="openinghours-table">
+         <thead>
+           <tr>
+             <th scope="col"></th>
+             <th scope="col">Csü</th>
+             <th scope="col">Pé</th>
+             <th scope="col">Szo</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th scope="row">Értékesítés</th>
+             <td data-title="Csü"><span>09:00-18:00</span></td>
+             <td data-title="Pé"><span>09:00-18:00</span></td>
+             <td data-title="Szo"><span>09:00-13:00</span></td>
+            </tr>
+           <tr>
+             <th scope="row">Szerviz</th>
+             <td data-title="Csü"><span>08:00-18:00</span></td>
+             <td data-title="Pé"><span>08:00-18:00</span></td>
+             <td data-title="Szo"><span>-</span></td>
+           </tr>
+         </tbody>
+       </table>
+
+
+
+   <!-- location contracts -->
+   <div class="location-contracts">
+     <h2 class="layout2">Az alábbi szolgáltatásokkal várjuk ezen a telephelyen:</h2>
+     <!-- sales-->
+     <div class="contract">
+       <p class="bold">Értékesítés</p>
+       <p>
+         Opel, Mitsubishi, Subaru, SsangYong  Haszonjárművek, WeltAuto használt járművek
+       </p>
+     </div>
+     <!-- service-->
+     <div class="contract">
+       <p class="bold">Szerviz</p>
+       <p>
+         Opel, Mitsubishi, Subaru, SsangYong  Haszonjárművek, WeltAuto használt járművek
+       </p>
+     </div>
+   </div>
+
+  </body>
+</html>

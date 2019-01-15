@@ -10,5 +10,7 @@ urlpatterns = [
         url(r'^$', views.homepage),
         url(r'^szerviz/', views.szerviz, name='szerviz'),
         url(r'^markak/', views.brands, name='markak'),
+        url(r'^kapcsolat/', views.kapcsolat, name='kapcsolat'),
+
 
 ]
