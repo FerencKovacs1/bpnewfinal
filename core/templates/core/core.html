@@ -17,7 +17,7 @@
   <!---#######   Script tags    ##########-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
-  <script src="{% static 'piv.js' %}"></script>
+  <script async src="{% static 'piv.js' %}"></script>
 
 
   <!---#######  Meta tags    ##########-->
@@ -134,13 +134,45 @@
       <li><a href="#">Autóbérlés</a></li>
   </ul>
 </nav>
+<div class="slideshow-container">
+
+<div class="mySlides fade1">
+  <div class="numbertext">1 / 3</div>
+  <img src="/static/januarbanner2.png" style="width:100%">
+  <!--<div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade1">
+  <div class="numbertext">2 / 3</div>
+  <img src="/static/januarbanner2.png" style="width:100%">
+<!--  <div class="text">Caption Two</div>-->
+</div>
+
+<div class="mySlides fade1">
+  <div class="numbertext">3 / 3</div>
+  <img src="/static/januarbanner2.png" style="width:100%">
+  <!--<div class="text">Caption Three</div>-->
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<!--
 
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's s
   tandard dummy text ever since the 1500s, whe
   n an unknown printer took a galley of type and scrambled it to make a type specimen book. It
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
 the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It   </p>
-<!-- Header Showcase -->
+ Header Showcase -->
 
 <!--
 <grid-container>
