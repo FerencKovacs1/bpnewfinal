@@ -99,13 +99,13 @@
         <a>Személyautók</a>
         <input type="checkbox" id="drop-1"/>
         <ul>
-            <li><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
+            <li><a href="{% url 'mitsubishi' %}"><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
             <li><a href=""><img src="{% static "subaru-logo-subarubudapest-subaru-markakereskedes.png" %}" alt="My image"  class="zoom"></div></a></li>
             <li><a href=""><img src="{% static "ssangyong-logo-ssangyongbudapest.png" %}" alt="My image"  class="zoom"></div></a></li>
             <li><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
         </ul>
     </li>
-      <li><a href="{% url 'core:szerviz' %}">Szerviz  </a></li>
+      <li><a href="{% url 'szerviz' %}">Szerviz  </a></li>
       <li>
 
       <!-- First Tier Drop Down -->
@@ -130,7 +130,7 @@
           </li>
       </ul>
       </li>
-      <li><a href="{% url 'core:kapcsolat' %}">Kapcsolat  </a></li>
+      <li><a href="{% url 'kapcsolat' %}">Kapcsolat  </a></li>
       <li><a href="#">Autóbérlés</a></li>
   </ul>
 </nav>

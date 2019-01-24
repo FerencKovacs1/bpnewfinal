@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title>Budapest Autószalon Opel, Mitsubishi, SsangoYong, Subaru és Használtautó márkakereskedés és szerviz</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <!---#######   Style Sheets    ##########-->
+
+  <link rel="stylesheet" href="{% static 'css/core.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mitsu.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!---#######   Script tags    ##########-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+  <script async src="{% static 'piv.js' %}"></script>
+
+
+  <!---#######  Meta tags    ##########-->
+
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="description" content="Új és használt autók, Opel, Subaru, Mitsubishi és SsangYong személy- és haszonjárművek,
+                                    szerviz, autó szerviz, márkaszerviz, márkafüggetlen szerviz.
+                                    Flottakezelés, business szolgáltatások és autóbérlés cégeknek és
+                                    magányszermélyeknek, használt autók garanciával">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body class="noselect">
+  <div class="container">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!--###Modal content###-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Szerviz bejelentkezés</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email cím</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="név@példa.hu">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1"> Válasszon telephelyet</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1044 Budapet Külső Váci út 57.</option>
+                  <option>2310 Szigetszentmiklós II. Rákóczi Ferenc utca 57.</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect2"> </label>
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"> Üzenet</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Küldés</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Top nav
+<nav>
+  <div id="top-nav" >
+    <ul>
+      <li><a data-toggle="modal" data-target="#myModal">Szerviz bejelentkezés</a></li>
+      <li><a data-toggle="modal" data-target="#myModal">Ajánlatkérés</a></li>
+      <li><a data-toggle="modal" data-target="#myModal">Tesztvezetés</a></li>
+      <li><a href="./kapcsolat/kapcsolat.html">Kapcsolat</a></li>
+    </ul>
+  </div>
+</nav>-->
+<nav>
+<div id="logo">Budapest Autószalon Logo</div>
+
+<label for="drop" class="toggle">Menu</label>
+<input type="checkbox" id="drop" />
+  <ul class="menu">  <li>
+
+        <!-- First Tier Drop Down -->
+        <label for="drop-1" class="toggle">Személyautók+</label>
+        <a>Személyautók</a>
+        <input type="checkbox" id="drop-1"/>
+        <ul>
+            <li><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
+            <li><a href=""><img src="{% static "subaru-logo-subarubudapest-subaru-markakereskedes.png" %}" alt="My image"  class="zoom"></div></a></li>
+            <li><a href=""><img src="{% static "ssangyong-logo-ssangyongbudapest.png" %}" alt="My image"  class="zoom"></div></a></li>
+            <li><a href=""><img src="{% static "mitsu-logo.png" %}" alt="My image"  class="zoom"></div></a></li>
+        </ul>
+    </li>
+      <li><a href="{% url 'szerviz' %}">Szerviz  </a></li>
+      <li>
+
+      <!-- First Tier Drop Down -->
+      <label for="drop-2" class="toggle">Használt autók</label>
+      <a href="#">Autó</a>
+      <input type="checkbox" id="drop-2"/>
+      <ul>
+          <li><a href="#">res</a></li>
+          <li><a href="#">Links</a></li>
+          <li>
+
+          <!-- Second Tier Drop Down -->
+          <label for="drop-3" class="toggle">csimpao +</label>
+          <a href="#">Többi</a>
+          <input type="checkbox" id="drop-3"/>
+
+          <ul>
+              <li><a href="#">zsák</a></li>
+              <li><a href="#">field</a></li>
+              <li><a href="#">Other</a></li>
+          </ul>
+          </li>
+      </ul>
+      </li>
+      <li><a href="{% url 'kapcsolat' %}">Kapcsolat  </a></li>
+      <li><a href="#">Autóbérlés</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="card">
+    <span class="tag">NEW</span>
+    <img src="">
+    <h1>Eclipse Cross</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+  <div class="card">
+    <img src="..">
+    <h1>Space Star</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+  <div class="card">
+    <img src="..">
+    <h1>i-Miev</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+  <div class="card">
+    <img src="..">
+    <h1>ASX</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+  <div class="card" style="margin-top: 1.5em;">
+    <img src="..">
+    <h1>Outlander</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+  <div class="card" style="margin-top: 1.5em;">
+    <img src="..">
+    <h1>Outlander PHEV</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+  <div class="card" style="margin-top: 1.5em;">
+    <img src="..">
+    <h1>Pajero</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+  <div class="card" style="margin-top: 1.5em;">
+    <img src="..">
+    <h1>Pajero Wagon</h1>
+    <p> Amerock decorative knobs and pulls offer exclusive designs as well as the time-honored classics.</p>
+  </div>
+
+</main>
+<!-- Footer ezen a részen kell a kettő szalon címét két olszlopban prezentálni és jelenzni hogy melyik értékesítés hol van
+ezzel együtt aszerviz is szét szedni.
+továbbá linkeket elhelyezni ... oldaltérkép -->
+<div class="container">
+  <p> Címünk:<br /> 1044 Budapest (Külső) Váci út 76-80.  </p>
+  <p> Új és használt értékesítés<br />
+  H-P: 8.00 - 18.00 <br />
+  Szombat: 9.00 - 13.00
+  </p>
+  <p> Szerviz<br />
+    H-P: 8.00 - 17.00 <br />
+    Szombat: Zárva
+  </p>
+  <p>Copyright © 2019 Sziget Autóház Kft. All rights reserved. Az árváltoztatás jogát fenntartjuk. Az esetleges hibákért felelősséget nem vállalunk. </p>
+
+</div>
+</body>
+</html>

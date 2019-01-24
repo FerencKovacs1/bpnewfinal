@@ -7,8 +7,8 @@ def homepage(request):
 def szerviz(request):
     return render(request,'core/szerviz.html')
 
-def brands(request):
-    return render(request,'core/markak.html')
+def mitsu(request):
+    return render(request,'core/mitsubishi.html')
 
 def kapcsolat(request):
     return render(request,'core/kapcsolat.html')

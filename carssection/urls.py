@@ -3,11 +3,11 @@ from django.urls import path, include
 from django.conf.urls import url
 from . import views
 
-app_name = 'cars'
+app
 
 urlpatterns = [
-        url(r'^$', views.car_list, name="list"),
-        url(r'^(?P<slug>[\w-]+)/$',views.car_detail, name="detail"),
+        url(r'^mitsubishi$', carssection.views.mitsubishi, name='mitsubishi'),
+
 ]
 #name capturing group for urls
 #Freihof1478963Humu7894I3gnHX0UYP
