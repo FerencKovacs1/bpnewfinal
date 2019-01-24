@@ -1,5 +1,24 @@
 /* Core Styles */
 
+1vw = 1% of viewport width
+
+1vh = 1% of viewport height
+
+1vmin = 1vw or 1vh, whichever is smaller
+
+1vmax = 1vw or 1vh, whichever is larger
+
+h1 {
+  font-size: 5.9vw;
+}
+h2 {
+  font-size: 3.0vh;
+}
+p {
+  font-size: 2vmin;
+}
+
+
 body {
   font-family: 'Montserrat', sans-serif;
   /*font-size: 1.1em;*/
